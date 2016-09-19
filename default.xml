@@ -7,6 +7,12 @@
   <remote  name="github"
            fetch="https://github.com" />
 
+  <remote  name="cm"
+           fetch="https://github.com/CyanogenMod" />
+
+  <remote  name="pc"
+           fetch="https://github.com/PureCAF" />		   
+
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
@@ -319,16 +325,6 @@
   <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/wilhelm" path="frameworks/wilhelm"/>
   <project groups="pdk" name="platform/hardware/libhardware" path="hardware/libhardware"/>
   <project groups="pdk" name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy"/>
-  <project groups="qcom,default" name="platform/hardware/qcom/audio" path="hardware/qcom/audio"/>
-  <project groups="qcom" name="platform/hardware/qcom/bt" path="hardware/qcom/bt"/>
-  <project groups="qcom,default" name="platform/hardware/qcom/camera" path="hardware/qcom/camera"/>
-  <project groups="qcom,qcom_display" name="platform/hardware/qcom/display" path="hardware/qcom/display"/>
-  <project groups="qcom,qcom_gps" name="platform/hardware/qcom/gps" path="hardware/qcom/gps"/>
-  <project groups="qcom" name="platform/hardware/qcom/keymaster" path="hardware/qcom/keymaster"/>
-  <project groups="qcom,default" name="platform/hardware/qcom/media" path="hardware/qcom/media"/>
-  <project groups="qcom,default" name="platform/hardware/qcom/sensors" path="hardware/qcom/sensors"/>
-  <project groups="qcom_wlan" name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan"/>
-  <project groups="pdk" name="platform/hardware/ril" path="hardware/ril"/>
   <project groups="pdk" name="platform/libcore" path="libcore"/>
   <project groups="pdk" name="platform/libnativehelper" path="libnativehelper"/>
   <project groups="generic_fs" name="platform/ndk" path="ndk"/>
@@ -478,5 +474,46 @@
   <project name="platform/vendor/qcom-opensource/time-services" path="vendor/qcom/opensource/time-services"/>
   <project name="platform/vendor/qcom-opensource/wlan/utils/sigma-dut" path="vendor/qcom/opensource/wlan/utils/sigma-dut"/>
   <project name="toolchain/binutils"/>
+
+  <!-- Project Pathmap -->
+  <project path="hardware/qcom/audio/default" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/audio-caf/apq8084" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="staging/cm-14.0-caf-8084" remote="cm" />
+  <project path="hardware/qcom/audio-caf/msm8916" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="staging/cm-14.0-caf-8916" remote="cm" />
+  <project path="hardware/qcom/audio-caf/msm8937" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="staging/cm-14.0-caf-8937" remote="cm" />
+  <project path="hardware/qcom/audio-caf/msm8952" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="staging/cm-14.0-caf-8952" remote="cm" />
+  <project path="hardware/qcom/audio-caf/msm8960" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="staging/cm-14.0-caf-8960" remote="cm" />
+  <project path="hardware/qcom/audio-caf/msm8974" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="staging/cm-14.0-caf-8974" remote="cm" />
+  <project path="hardware/qcom/audio-caf/msm8994" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="staging/cm-14.0-caf-8994" remote="cm" />
+  <project path="hardware/qcom/audio-caf/msm8996" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="staging/cm-14.0-caf-8996" remote="cm" />
+  <project path="hardware/qcom/bootctrl" name="android_hardware_qcom_bootctrl" groups="pdk" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" groups="qcom" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/bt-caf" name="android_hardware_qcom_bt" groups="qcom" revision="staging/cm-14.0-caf" remote="cm" />
+  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" groups="qcom" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/display-caf/apq8084" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="staging/cm-14.0-caf-8084" remote="cm" />
+  <project path="hardware/qcom/display-caf/msm8916" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="staging/cm-14.0-caf-8916" remote="cm" />
+  <project path="hardware/qcom/display-caf/msm8937" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="staging/cm-14.0-caf-8937" remote="cm" />
+  <project path="hardware/qcom/display-caf/msm8952" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="staging/cm-14.0-caf-8952" remote="cm" />
+  <project path="hardware/qcom/display-caf/msm8960" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="staging/cm-14.0-caf-8960" remote="cm" />
+  <project path="hardware/qcom/display-caf/msm8974" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="staging/cm-14.0-caf-8974" remote="cm" />
+  <project path="hardware/qcom/display-caf/msm8994" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="staging/cm-14.0-caf-8994" remote="cm" />
+  <project path="hardware/qcom/display-caf/msm8996" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="staging/cm-14.0-caf-8996" remote="cm" />
+  <project path="hardware/qcom/fm" name="android_hardware_qcom_fm" groups="qcom,qcom_fm" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" groups="qcom,qcom_gps" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" groups="qcom,qcom_keymaster" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/media" name="android_hardware_qcom_media" groups="qcom" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/media-caf/apq8084" name="android_hardware_qcom_media" groups="qcom" revision="staging/cm-14.0-caf-8084" remote="cm" />
+  <project path="hardware/qcom/media-caf/msm8916" name="android_hardware_qcom_media" groups="qcom" revision="staging/cm-14.0-caf-8916" remote="cm" />
+  <project path="hardware/qcom/media-caf/msm8937" name="android_hardware_qcom_media" groups="qcom" revision="staging/cm-14.0-caf-8937" remote="cm" />
+  <project path="hardware/qcom/media-caf/msm8952" name="android_hardware_qcom_media" groups="qcom" revision="staging/cm-14.0-caf-8952" remote="cm" />
+  <project path="hardware/qcom/media-caf/msm8960" name="android_hardware_qcom_media" groups="qcom" revision="staging/cm-14.0-caf-8960" remote="cm" />
+  <project path="hardware/qcom/media-caf/msm8974" name="android_hardware_qcom_media" groups="qcom" revision="staging/cm-14.0-caf-8974" remote="cm" />
+  <project path="hardware/qcom/media-caf/msm8994" name="android_hardware_qcom_media" groups="qcom" revision="staging/cm-14.0-caf-8994" remote="cm" />
+  <project path="hardware/qcom/media-caf/msm8996" name="android_hardware_qcom_media" groups="qcom" revision="staging/cm-14.0-caf-8996" remote="cm" />
+  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" groups="qcom_wlan" revision="staging/cm-14.0" remote="cm" />
+  <project path="hardware/qcom/wlan-caf" name="android_hardware_qcom_wlan" groups="qcom_wlan" revision="staging/cm-14.0-caf" remote="cm" />
+  <project path="hardware/ril" name="android_hardware_ril" groups="pdk" revision="staging/cm-14.0" remote="cm" />
+  <!-- Use Old RIL branch until we get a new BSP -->
+  <project path="hardware/ril-caf" name="android_hardware_ril" groups="pdk" revision="cm-14.0-caf" remote="cm" />
 
 </manifest>
