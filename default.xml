@@ -17,8 +17,10 @@
            fetch="ssh://git@github.com" />
 
   <default remote="caf" 
-           revision="LA.BR.1.2.9_rb1.5"
-           sync-j="4" />
+           revision="LA.BR.1.2.9_rb1.6"
+           sync-c="true"
+           sync-f="true"
+           sync-j="8" />
 
   <project name="device/qcom/sepolicy"/>
   <project groups="pdk" name="platform/abi/cpp" path="abi/cpp"/>
